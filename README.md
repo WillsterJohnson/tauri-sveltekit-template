@@ -1,18 +1,29 @@
 # TODO LIST
 
-- package.json
-  - name
-- tauri.conf.json
-  - package.productName
-  - bundle
-    - identifier
-    - shortDescription
-    - longDescription
-    - copyright
-  - windows.title
-- Cargo.toml
-  - package
+- fill in fields
+  - package.json
     - name
-    - default-run
-  - bin
-    - name
+  - tauri.conf.json
+    - package.productName
+    - bundle
+      - identifier
+      - shortDescription
+      - longDescription
+      - copyright
+    - windows.title
+  - Cargo.toml
+    - package
+      - name
+      - default-run
+    - bin
+      - name
+- update web adapter
+  - svelte.config.js
+    - import
+    - adapter
+  - .gitignore
+    - ignore web build output
+  - package.json
+    - devDependencies
+      - @sveltejs/adapter-vercel
+  - npm install

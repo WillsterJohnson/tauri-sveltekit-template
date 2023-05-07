@@ -1,15 +1,25 @@
 import { vitePreprocess } from "@sveltejs/kit/vite";
-import adapter from "@sveltejs/adapter-static";
+import aStatic from "@sveltejs/adapter-static";
+// TODO
+import aVercel from "@sveltejs/adapter-vercel";
+
+function adapter() {
+  const npm_lifecycle_event = process.env.npm_lifecycle_event;
+  if (npm_lifecycle_event === "app-build" || npm_lifecycle_event === "sk-dev")
+    return aStatic({
+      pages: ".outputs/adapter-static",
+      assets: ".outputs/adapter-static",
+    });
+  // TODO
+  if (npm_lifecycle_event === "web-build") return aVercel();
+}
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   preprocess: vitePreprocess(),
   kit: {
     outDir: ".outputs/svelte-kit",
-    adapter: adapter({
-      pages: ".outputs/adapter-static",
-      assets: ".outputs/adapter-static",
-    }),
+    adapter: adapter(),
     files: {
       hooks: {
         client: "app/hooks/client.ts",
@@ -27,5 +37,3 @@ const config = {
 };
 
 export default config;
-
-// ln -s .outputs/target/ <the path of the link to be created>

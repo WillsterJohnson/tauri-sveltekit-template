@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "pnpm sk-build",
+    "beforeBuildCommand": "pnpm app-build",
     "beforeDevCommand": "pnpm sk-dev",
     "devPath": "http://localhost:5173",
     "distDir": ".outputs/adapter-static"
