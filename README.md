@@ -17,6 +17,9 @@
       - default-run
     - bin
       - name
+  - LICENSE.md
+    - program description
+    - copyright info
 - update web adapter
   - svelte.config.js
     - import
