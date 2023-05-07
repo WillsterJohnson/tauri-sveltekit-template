@@ -1,5 +1,5 @@
-    A.R.G.O.N. - Accessible Remote GitHub Organizer for Noobs
-    Copyright (C) 2023 Will 'WillsterJohnson' Johnson
+    ~TODO~
+    Copyright (C) ~TODO~
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
