@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "bump": "bash ./scripts/bump.js",
+    "bump": "node ./scripts/bump.js",
     "dev": "tauri dev",
     "build": "tauri build",
     "sk-dev": "vite dev --open",
