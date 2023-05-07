@@ -114,7 +114,6 @@ function versionToString(version) {
  * @returns {string}
  */
 function pathOf(file) {
-  // @ts-expect-error
   return new URL(file, import.meta.url).pathname;
 }
 
@@ -149,6 +148,7 @@ function main() {
     }, 3000);
   } else {
     const current = getCurrentVersion();
+    // @ts-expect-error - casting to Bump
     const next = getVersionForBumpType(current, process.argv[2]);
     const nextVersionString = versionToString(next);
     writeToVersionFiles(nextVersionString);
